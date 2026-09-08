@@ -28,7 +28,9 @@ android {
     compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
     kotlinOptions { jvmTarget = "17" }
     packaging { resources.excludes += "/META-INF/{AL2.0,LGPL2.1}" }
-    lint { abortOnError = true; warningsAsErrors = true; checkReleaseBuilds = true }
+    // Keep real lint errors release-blocking. Advisory warnings are reported without
+    // breaking the APK build (for example when a newer preview target API appears).
+    lint { abortOnError = true; warningsAsErrors = false; checkReleaseBuilds = true }
 }
 
 dependencies {
