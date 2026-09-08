@@ -29,6 +29,7 @@ import de.salsacompany.app.model.*
 private val Ink=Color(0xFF171214); private val Coral=Color(0xFFC93B4A); private val Gold=Color(0xFFF2B84B); private val Ivory=Color(0xFFFFF8F3)
 private enum class Tab(val title:String){ HOME("Start"), COURSES("Kurse"), EVENTS("Events"), MORE("Mehr") }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable fun SalsaCompanyApp(){
     val repo=remember{BundledContentRepository()}; var tab by rememberSaveable{mutableStateOf(Tab.HOME)}
     var branchId by rememberSaveable{mutableStateOf("stuttgart")}; var showBranches by remember{mutableStateOf(false)}
