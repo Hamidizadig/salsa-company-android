@@ -1,0 +1,1 @@
+<resources><style name="Theme.SalsaCompany" parent="android:style/Theme.Material.Light.NoActionBar"><item name="android:fontFamily">sans</item><item name="android:windowLightStatusBar">false</item><item name="android:statusBarColor">#171214</item><item name="android:navigationBarColor">#171214</item></style></resources>
